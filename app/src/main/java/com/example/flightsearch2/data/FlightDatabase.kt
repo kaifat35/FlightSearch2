@@ -1,4 +1,4 @@
-package com.example.flightsearch.data
+package com.example.flightsearch2.data
 
 import android.content.Context
 import androidx.room.Database
@@ -20,8 +20,8 @@ abstract class FlightDatabase : RoomDatabase() {
                     FlightDatabase::class.java,
                     "flight_database"
                 )
+                    .createFromAsset("databases/flight_search_v2.db")
                     .fallbackToDestructiveMigration()
-                    .createFromAsset("databases/flight_search.db")
                     .build()
 
                 INSTANCE = instance

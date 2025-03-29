@@ -1,4 +1,4 @@
-package com.example.flightsearch.data
+package com.example.flightsearch2.data
 
 import androidx.room.Dao
 import androidx.room.Delete

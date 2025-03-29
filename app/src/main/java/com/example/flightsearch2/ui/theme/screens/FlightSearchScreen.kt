@@ -1,4 +1,4 @@
-package com.example.flightsearch.ui.theme.screens
+package com.example.flightsearch2.ui.theme.screens
 
 import android.app.Application
 import androidx.compose.foundation.clickable
@@ -26,8 +26,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.example.flightsearch.data.Airport
-import com.example.flightsearch.data.Favorite
+import com.example.flightsearch2.data.Airport
+import com.example.flightsearch2.data.Favorite
 import com.example.flightsearch.viewmodel.FlightViewModel
 
 @Composable

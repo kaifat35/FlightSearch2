@@ -1,9 +1,9 @@
 package com.example.flightsearch2
 
 import android.app.Application
-import com.example.flightsearch.data.FlightDatabase
-import com.example.flightsearch.data.UserPreferencesRepository
-import com.example.flightsearch.data.dataStore
+import com.example.flightsearch2.data.FlightDatabase
+import com.example.flightsearch2.data.UserPreferencesRepository
+import com.example.flightsearch2.data.dataStore
 
 class FlightApplication : Application() {
     // Экземпляр базы данных (ленивая инициализация)

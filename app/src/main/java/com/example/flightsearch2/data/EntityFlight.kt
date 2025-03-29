@@ -1,9 +1,7 @@
-package com.example.flightsearch.data
+package com.example.flightsearch2.data
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
-import androidx.room.ForeignKey
-import androidx.room.Index
 import androidx.room.PrimaryKey
 
 @Entity(tableName = "airport")

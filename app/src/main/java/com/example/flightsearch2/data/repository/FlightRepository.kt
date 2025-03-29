@@ -1,8 +1,8 @@
 package com.example.flightsearch.data.repository
 
-import com.example.flightsearch.data.Favorite
-import com.example.flightsearch.data.FlightDao
-import com.example.flightsearch.data.UserPreferencesRepository
+import com.example.flightsearch2.data.Favorite
+import com.example.flightsearch2.data.FlightDao
+import com.example.flightsearch2.data.UserPreferencesRepository
 
 class FlightRepository(
     private val flightDao: FlightDao,

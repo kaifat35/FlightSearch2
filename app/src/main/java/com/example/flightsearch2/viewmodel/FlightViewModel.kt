@@ -6,14 +6,14 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
-import com.example.flightsearch.data.Airport
-import com.example.flightsearch.data.Favorite
-import com.example.flightsearch.data.FlightDatabase
-import com.example.flightsearch.data.UserPreferencesRepository
+import com.example.flightsearch2.data.Airport
+import com.example.flightsearch2.data.Favorite
+import com.example.flightsearch2.data.FlightDatabase
+import com.example.flightsearch2.data.UserPreferencesRepository
 import com.example.flightsearch.data.repository.FlightRepository
 import kotlinx.coroutines.launch
 import androidx.compose.runtime.State
-import com.example.flightsearch.data.dataStore
+import com.example.flightsearch2.data.dataStore
 
 class FlightViewModel(
     application: Application,
