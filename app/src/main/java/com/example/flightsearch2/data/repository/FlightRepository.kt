@@ -1,4 +1,4 @@
-package com.example.flightsearch.data.repository
+package com.example.flightsearch2.data.repository
 
 import com.example.flightsearch2.data.Favorite
 import com.example.flightsearch2.data.FlightDao
@@ -20,7 +20,6 @@ class FlightRepository(
     }
     suspend fun isFavorite(departure: String, destination: String) =
         flightDao.isFavorite(departure, destination)
-    suspend fun getAirportByCode(code: String) = flightDao.getAirportByCode(code)
     suspend fun updateSearchQuery(query: String) = preferencesRepository.updateSearchQuery(query)
     val searchQuery = preferencesRepository.searchQuery
 }

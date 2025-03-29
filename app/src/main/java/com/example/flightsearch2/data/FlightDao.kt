@@ -22,9 +22,6 @@ interface FlightDao {
     @Query("SELECT * FROM favorite")
     suspend fun getAllFavorites(): List<Favorite>
 
-    @Query("SELECT * FROM airport WHERE iata_code = :code LIMIT 1")
-    suspend fun getAirportByCode(code: String): Airport?
-
     @Query("SELECT EXISTS(SELECT 1 FROM favorite WHERE departure_code = :departure AND destination_code = :destination)")
     suspend fun isFavorite(departure: String, destination: String): Boolean
 }

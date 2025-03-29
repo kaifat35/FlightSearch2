@@ -28,7 +28,7 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.flightsearch2.data.Airport
 import com.example.flightsearch2.data.Favorite
-import com.example.flightsearch.viewmodel.FlightViewModel
+import com.example.flightsearch2.viewmodel.FlightViewModel
 
 @Composable
 fun FlightSearchScreen(
@@ -36,18 +36,18 @@ fun FlightSearchScreen(
         factory = FlightViewModel.provideFactory(LocalContext.current.applicationContext as Application)
     )
 ) {
-    val searchQuery by viewModel.searchQuery
-    val suggestions by viewModel.suggestions
-    val destinations by viewModel.destinations
-    val favorites by viewModel.favorites
-    val selectedAirport by viewModel.selectedAirport
+    val searchQuery by viewModel.searchQuery // Текущий поисковый запрос
+    val suggestions by viewModel.suggestions // Список аэропортов по запросу
+    val destinations by viewModel.destinations // Возможные направления
+    val favorites by viewModel.favorites // Избранные маршруты
+    val selectedAirport by viewModel.selectedAirport // Выбранный аэропорт
 
     Column(modifier = Modifier.padding(16.dp)) {
         SearchField(
             value = searchQuery.toString(),
             onValueChange = { viewModel.onSearchQueryChanged(it) },
             modifier = Modifier.fillMaxWidth()
-        )
+        )// Поле поиска
 
         if (suggestions.isNotEmpty()) {
             AirportSuggestions(
@@ -58,6 +58,7 @@ fun FlightSearchScreen(
         }
 
         when {
+            // Показ направлений при выборе аэропорта
             selectedAirport != null && destinations.isNotEmpty() -> {
                 DestinationsList(
                     departure = selectedAirport as Airport,
@@ -66,6 +67,7 @@ fun FlightSearchScreen(
                     viewModel = viewModel
                 )
             }
+            // Показ избранного при пустом поиске
             searchQuery.isEmpty() && favorites.isNotEmpty() -> {
                 FavoritesList(favorites = favorites)
             }

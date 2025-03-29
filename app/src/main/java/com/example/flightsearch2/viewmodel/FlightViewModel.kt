@@ -1,4 +1,4 @@
-package com.example.flightsearch.viewmodel
+package com.example.flightsearch2.viewmodel
 
 import android.app.Application
 import androidx.compose.runtime.mutableStateOf
@@ -10,7 +10,7 @@ import com.example.flightsearch2.data.Airport
 import com.example.flightsearch2.data.Favorite
 import com.example.flightsearch2.data.FlightDatabase
 import com.example.flightsearch2.data.UserPreferencesRepository
-import com.example.flightsearch.data.repository.FlightRepository
+import com.example.flightsearch2.data.repository.FlightRepository
 import kotlinx.coroutines.launch
 import androidx.compose.runtime.State
 import com.example.flightsearch2.data.dataStore
@@ -73,6 +73,8 @@ class FlightViewModel(
     private suspend fun loadFavorites() {
         _favorites.value = repository.getFavorites()
     }
+
+
 
     companion object {
         fun provideFactory(application: Application): ViewModelProvider.Factory {
